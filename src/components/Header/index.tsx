@@ -13,32 +13,6 @@ const statusBarHeight = StatusBar.currentHeight
 	? StatusBar.currentHeight + 8
 	: 36;
 
-export default function Header<Props>({ user }) {
-	return (
-		<View style={styles.container}>
-			<View style={styles.upperContent}>
-				<TouchableOpacity style={styles.circleShape}>
-					<Feather name="user" size={24} color="#ffffff" />
-				</TouchableOpacity>
-				<View style={styles.uperRightContent}>
-					<TouchableOpacity>
-						<Feather name="eye" size={24} color="#ffffff" />
-					</TouchableOpacity>
-					<TouchableOpacity>
-						<Feather name="help-circle" size={24} color="#ffffff" />
-					</TouchableOpacity>
-					<TouchableOpacity>
-						<Feather name="mail" size={24} color="#ffffff" />
-					</TouchableOpacity>
-				</View>
-			</View>
-			<View style={styles.lowerContent}>
-				<Text style={styles.welcomeText}>Olá, {user}!</Text>
-			</View>
-		</View>
-	);
-}
-
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: "#841ecd",
@@ -81,3 +55,31 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 });
+
+const Header: React.FC<Props> = ({ user }) => {
+	return (
+		<View style={styles.container}>
+			<View style={styles.upperContent}>
+				<TouchableOpacity style={styles.circleShape}>
+					<Feather name="user" size={24} color="#ffffff" />
+				</TouchableOpacity>
+				<View style={styles.uperRightContent}>
+					<TouchableOpacity>
+						<Feather name="eye" size={24} color="#ffffff" />
+					</TouchableOpacity>
+					<TouchableOpacity>
+						<Feather name="help-circle" size={24} color="#ffffff" />
+					</TouchableOpacity>
+					<TouchableOpacity>
+						<Feather name="mail" size={24} color="#ffffff" />
+					</TouchableOpacity>
+				</View>
+			</View>
+			<View style={styles.lowerContent}>
+				<Text style={styles.welcomeText}>Olá, {user}!</Text>
+			</View>
+		</View>
+	);
+};
+
+export default Header;
