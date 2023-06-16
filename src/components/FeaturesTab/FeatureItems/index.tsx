@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { ItemProps } from "./types";
 
 const styles = StyleSheet.create({
@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
 
 const FeatureItem: React.FC<ItemProps> = ({ name, children }) => {
 	return (
-		<View style={styles.container}>
+		<TouchableOpacity style={styles.container}>
 			<View style={styles.circleShape}>{children}</View>
 			<Text style={styles.descriptionText}>{name}</Text>
-		</View>
+		</TouchableOpacity>
 	);
 };
 
