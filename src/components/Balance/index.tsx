@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { Props } from "./types";
-import { padStart } from "lodash";
 
 const styles = StyleSheet.create({
 	container: { padding: 20 },
