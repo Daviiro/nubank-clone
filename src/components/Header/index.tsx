@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
 		gap: 20,
 	},
 	circleShape: {
-		width: 50,
-		height: 50,
-		borderRadius: 50 / 2,
+		width: 48,
+		height: 48,
+		borderRadius: 48 / 2,
 		backgroundColor: "#8e29d1",
 		justifyContent: "center",
 		alignItems: "center",
