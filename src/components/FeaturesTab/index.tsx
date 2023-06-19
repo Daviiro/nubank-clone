@@ -15,12 +15,13 @@ const styles = StyleSheet.create({
 		display: "flex",
 		flexDirection: "row",
 		gap: 8,
+		height: 128,
 	},
 });
 
 const FeaturesTab: React.FC = () => {
 	return (
-		<ScrollView horizontal>
+		<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 			<View style={styles.container}>
 				<FeatureItem name="Pix">
 					<Feather name="codepen" size={28} color="black" />
