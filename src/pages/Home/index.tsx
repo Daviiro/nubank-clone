@@ -3,8 +3,9 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import Header from "../../components/Header";
 import Balance from "../../components/Balance";
 import FeaturesTab from "../../components/FeaturesTab";
-import MyCards from "../../components/myCards";
+import MyCards from "../../components/MyCards";
 import News from "../../components/News";
+import CreditCard from "../../components/CreditCard";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				<FeaturesTab />
 				<MyCards />
 				<News />
+				<CreditCard />
 			</ScrollView>
 		</View>
 	);
