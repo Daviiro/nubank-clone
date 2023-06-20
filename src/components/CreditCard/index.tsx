@@ -28,9 +28,15 @@ const styles = StyleSheet.create({
 		marginTop: 8,
 		marginBottom: 8,
 	},
+	availableValue: {
+		color: "#9c9fa8",
+		fontWeight: "400",
+		fontSize: 14,
+		marginTop: 12,
+	},
 });
 
-const CreditCard: React.FC<Props> = ({ bill }) => {
+const CreditCard: React.FC<Props> = ({ bill, limit }) => {
 	return (
 		<View style={styles.container}>
 			<View
@@ -51,6 +57,10 @@ const CreditCard: React.FC<Props> = ({ bill }) => {
 						<Text style={styles.billText}>Fatura atual</Text>
 						<Text style={styles.creditCardText}>
 							R$ {bill ? String(bill).replace(".", ",") : "0,00"}
+						</Text>
+						<Text style={styles.availableValue}>
+							Limite disponível de R${" "}
+							{limit ? String(limit).replace(".", ",") : "0,00"}
 						</Text>
 					</View>
 				</View>
