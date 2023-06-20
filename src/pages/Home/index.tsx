@@ -18,7 +18,7 @@ export default function Home() {
 				<FeaturesTab />
 				<MyCards />
 				<News />
-				<CreditCard bill={640.25} />
+				<CreditCard bill={640.25} limit={400} />
 				<Loan loanValue={25000.0} />
 			</ScrollView>
 		</View>
