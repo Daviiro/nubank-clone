@@ -2,6 +2,9 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { Props } from "./types";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { StackParamList } from "../../../App";
 
 const styles = StyleSheet.create({
 	container: { padding: 20 },
@@ -16,10 +19,17 @@ const styles = StyleSheet.create({
 	},
 });
 
+type balanceScreenProp = StackNavigationProp<StackParamList, "Balance">;
+
 const Balance: React.FC<Props> = ({ balance }) => {
+	const navigation = useNavigation<balanceScreenProp>();
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity>
+			<TouchableOpacity
+				onPress={() =>
+					navigation.navigate("Balance", { value: balance })
+				}
+			>
 				<View style={styles.upperContent}>
 					<Text style={styles.defaultText}>Conta</Text>
 					<Feather name="chevron-right" size={24} color="black" />
