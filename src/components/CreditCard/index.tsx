@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Props } from "./types";
 import { Feather } from "@expo/vector-icons";
 
 const styles = StyleSheet.create({
@@ -35,6 +34,11 @@ const styles = StyleSheet.create({
 		marginTop: 12,
 	},
 });
+
+type Props = {
+	bill: number;
+	limit: number;
+};
 
 const CreditCard: React.FC<Props> = ({ bill, limit }) => {
 	return (

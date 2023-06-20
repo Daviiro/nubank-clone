@@ -1,7 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Props } from "./types";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { StackParamList } from "../../../App";
@@ -20,6 +19,9 @@ const styles = StyleSheet.create({
 });
 
 type balanceScreenProp = StackNavigationProp<StackParamList, "Balance">;
+type Props = {
+	balance: number;
+};
 
 const Balance: React.FC<Props> = ({ balance }) => {
 	const navigation = useNavigation<balanceScreenProp>();

@@ -7,7 +7,6 @@ import {
 	TouchableOpacity,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Props } from "./types";
 
 const statusBarHeight = StatusBar.currentHeight
 	? StatusBar.currentHeight + 8
@@ -55,6 +54,10 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 });
+
+export type Props = {
+	user: string;
+};
 
 const Header: React.FC<Props> = ({ user }) => {
 	return (

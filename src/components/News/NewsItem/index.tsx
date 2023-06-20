@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { Props } from "./types";
 
 const styles = StyleSheet.create({
 	container: {
@@ -18,6 +17,10 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 	},
 });
+
+type Props = {
+	desc: string;
+};
 
 const NewsItem: React.FC<Props> = ({ desc }) => {
 	return (

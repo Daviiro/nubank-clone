@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { ItemProps } from "./types";
 
 const styles = StyleSheet.create({
 	container: {
@@ -22,6 +21,11 @@ const styles = StyleSheet.create({
 		fontWeight: "600",
 	},
 });
+
+export type ItemProps = {
+	name: string;
+	children?: string | JSX.Element | JSX.Element[];
+};
 
 const FeatureItem: React.FC<ItemProps> = ({ name, children }) => {
 	return (

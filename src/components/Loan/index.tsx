@@ -1,5 +1,4 @@
 import React from "react";
-import { Props } from "./types";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
@@ -22,6 +21,10 @@ const styles = StyleSheet.create({
 		marginBottom: 2,
 	},
 });
+
+export type Props = {
+	loanValue: number;
+};
 
 const Loan: React.FC<Props> = ({ loanValue }) => {
 	return (
