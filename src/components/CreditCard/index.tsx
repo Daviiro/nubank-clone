@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 	},
 	creditCardText: {
 		fontWeight: "600",
-		fontSize: 24,
+		fontSize: 20,
 	},
 	billText: {
 		color: "#9c9fa8",
@@ -55,12 +55,6 @@ const CreditCard: React.FC<Props> = ({ bill }) => {
 					</View>
 				</View>
 			</TouchableOpacity>
-			<View
-				style={{
-					borderBottomColor: "#f5f5f5",
-					borderBottomWidth: StyleSheet.hairlineWidth,
-				}}
-			/>
 		</View>
 	);
 };

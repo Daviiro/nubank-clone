@@ -14,10 +14,6 @@ const styles = StyleSheet.create({
 		fontSize: 20,
 		fontWeight: "600",
 	},
-	accountBalance: {
-		fontSize: 24,
-		fontWeight: "600",
-	},
 });
 
 const Balance: React.FC<Props> = ({ balance }) => {
@@ -28,7 +24,7 @@ const Balance: React.FC<Props> = ({ balance }) => {
 					<Text style={styles.defaultText}>Conta</Text>
 					<Feather name="chevron-right" size={24} color="black" />
 				</View>
-				<Text style={styles.accountBalance}>
+				<Text style={styles.defaultText}>
 					R$ {String(balance).replace(".", ",")}
 				</Text>
 			</TouchableOpacity>

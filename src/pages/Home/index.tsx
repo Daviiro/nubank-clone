@@ -6,6 +6,7 @@ import FeaturesTab from "../../components/FeaturesTab";
 import MyCards from "../../components/MyCards";
 import News from "../../components/News";
 import CreditCard from "../../components/CreditCard";
+import Loan from "../../components/Loan";
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 				<MyCards />
 				<News />
 				<CreditCard bill={640.25} />
+				<Loan loanValue={25000.0} />
 			</ScrollView>
 		</View>
 	);
