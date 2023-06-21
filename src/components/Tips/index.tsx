@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import NewsItem from "./NewsItem";
+import NewsItem from "./TipsItem";
 
 const styles = StyleSheet.create({
 	container: {
