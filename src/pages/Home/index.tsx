@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import Balance from "../../components/Balance";
 import FeaturesTab from "../../components/FeaturesTab";
 import MyCards from "../../components/MyCards";
-import News from "../../components/News";
+import Tips from "../../components/Tips";
 import CreditCard from "../../components/CreditCard";
 import Loan from "../../components/Loan";
 
@@ -17,7 +17,7 @@ export default function Home() {
 				<Balance balanceValue={800.25} />
 				<FeaturesTab />
 				<MyCards />
-				<News />
+				<Tips />
 				<CreditCard bill={640.25} limit={400} />
 				<Loan loanValue={25000.0} />
 			</ScrollView>
