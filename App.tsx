@@ -5,7 +5,7 @@ import Balance from "./src/pages/Balance";
 
 export type StackParamList = {
 	Home: undefined;
-	Balance: { value: number };
+	Balance: { balanceValue: number };
 };
 
 export default function App() {

@@ -19,25 +19,23 @@ const styles = StyleSheet.create({
 });
 
 type balanceScreenProp = StackNavigationProp<StackParamList, "Balance">;
-type Props = {
-	balance: number;
-};
+interface Props {
+	balanceValue: number;
+}
 
-const Balance: React.FC<Props> = ({ balance }) => {
+const Balance: React.FC<Props> = ({ balanceValue }) => {
 	const navigation = useNavigation<balanceScreenProp>();
 	return (
 		<View style={styles.container}>
 			<TouchableOpacity
-				onPress={() =>
-					navigation.navigate("Balance", { value: balance })
-				}
+				onPress={() => navigation.navigate("Balance", { balanceValue })}
 			>
 				<View style={styles.upperContent}>
 					<Text style={styles.defaultText}>Conta</Text>
 					<Feather name="chevron-right" size={24} color="black" />
 				</View>
 				<Text style={styles.defaultText}>
-					R$ {String(balance).replace(".", ",")}
+					R$ {String(balanceValue).replace(".", ",")}
 				</Text>
 			</TouchableOpacity>
 		</View>
