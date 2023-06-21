@@ -12,7 +12,7 @@ const statusBarHeight = StatusBar.currentHeight
 const styles = StyleSheet.create({
 	container: {
 		paddingTop: statusBarHeight,
-		paddingBottom: 24,
+		paddingBottom: 20,
 		paddingLeft: 20,
 		paddingRight: 20,
 		display: "flex",
