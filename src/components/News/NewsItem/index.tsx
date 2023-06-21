@@ -18,9 +18,9 @@ const styles = StyleSheet.create({
 	},
 });
 
-type Props = {
+interface Props {
 	desc: string;
-};
+}
 
 const NewsItem: React.FC<Props> = ({ desc }) => {
 	return (

@@ -30,8 +30,8 @@ const Content: React.FC = () => {
 				<Text style={styles.availableValue}>Saldo disponível</Text>
 				<Text style={styles.valueText}>
 					R${" "}
-					{route.params?.value
-						? String(route.params.value).replace(".", ",")
+					{route.params?.balanceValue
+						? String(route.params.balanceValue).replace(".", ",")
 						: "0,00"}
 				</Text>
 			</View>

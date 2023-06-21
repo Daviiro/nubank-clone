@@ -14,7 +14,7 @@ export default function Home() {
 			<StatusBar style="auto" />
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<Header user="David" />
-				<Balance balance={800.25} />
+				<Balance balanceValue={800.25} />
 				<FeaturesTab />
 				<MyCards />
 				<News />

@@ -55,9 +55,9 @@ const styles = StyleSheet.create({
 	},
 });
 
-export type Props = {
+interface Props {
 	user: string;
-};
+}
 
 const Header: React.FC<Props> = ({ user }) => {
 	return (

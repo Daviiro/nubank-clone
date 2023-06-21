@@ -1,16 +1,9 @@
 import React from "react";
-import {
-	View,
-	StyleSheet,
-	Text,
-	StatusBar,
-	TouchableOpacity,
-} from "react-native";
+import { View, StyleSheet, StatusBar, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { RouteProp, useNavigation } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { StackParamList } from "../../../App";
-import { useRoute } from "@react-navigation/native";
 
 const statusBarHeight = StatusBar.currentHeight
 	? StatusBar.currentHeight + 8
@@ -39,7 +32,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-type balanceScreenProp = NativeStackNavigationProp<StackParamList, "Balance">;
+type balanceScreenProp = StackNavigationProp<StackParamList, "Balance">;
 interface NavigationProps {
 	screen: string;
 }

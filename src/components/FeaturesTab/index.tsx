@@ -7,7 +7,7 @@ import {
 	Fontisto,
 	Entypo,
 } from "@expo/vector-icons";
-import FeatureItem from "./FeatureItems";
+import FeatureItem from "../FeatureItems";
 
 const styles = StyleSheet.create({
 	container: {

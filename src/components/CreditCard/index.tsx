@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
 	},
 });
 
-type Props = {
+interface Props {
 	bill: number;
 	limit: number;
-};
+}
 
 const CreditCard: React.FC<Props> = ({ bill, limit }) => {
 	return (

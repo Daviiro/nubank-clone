@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
 	},
 });
 
-export type Props = {
+interface Props {
 	loanValue: number;
-};
+}
 
 const Loan: React.FC<Props> = ({ loanValue }) => {
 	return (
