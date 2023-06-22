@@ -14,7 +14,7 @@ const Balance: React.FC = () => {
 	return (
 		<View style={styles.container}>
 			<StatusBar style="auto" />
-			<NavigationHeader screen="Home" />
+			<NavigationHeader screen="HomePage" />
 			<Content />
 		</View>
 	);

@@ -8,6 +8,13 @@ import Tips from "../../components/Tips";
 import CreditCard from "../../components/CreditCard";
 import Loan from "../../components/Loan";
 
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+	},
+});
+
 export default function Home() {
 	return (
 		<View style={styles.container}>
@@ -24,10 +31,3 @@ export default function Home() {
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-	},
-});
