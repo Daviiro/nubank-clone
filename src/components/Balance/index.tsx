@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-type balanceScreenProp = StackNavigationProp<StackParamList, "Balance">;
+type balanceScreenProp = StackNavigationProp<StackParamList, "BalancePage">;
 interface Props {
 	balanceValue: number;
 }
@@ -28,7 +28,9 @@ const Balance: React.FC<Props> = ({ balanceValue }) => {
 	return (
 		<View style={styles.container}>
 			<TouchableOpacity
-				onPress={() => navigation.navigate("Balance", { balanceValue })}
+				onPress={() =>
+					navigation.navigate("BalancePage", { balanceValue })
+				}
 			>
 				<View style={styles.upperContent}>
 					<Text style={styles.defaultText}>Conta</Text>
