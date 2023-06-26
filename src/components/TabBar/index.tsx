@@ -102,6 +102,7 @@ const TabBar: React.FC<Props> = ({ state, descriptors, navigation }) => {
 							onPress={onPress}
 							onLongPress={onLongPress}
 							style={styles.buttonTab}
+							key={index}
 						>
 							<View
 								style={[
