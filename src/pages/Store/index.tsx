@@ -277,7 +277,7 @@ const Store: React.FC = () => {
 							<CashbackCard
 								name="Tok&Stok"
 								discount="2% de cashback"
-								img={require("../../../assets/tok&stock.png")}
+								img={require("../../../assets/tokstock.png")}
 							/>
 						</View>
 					</Cashback>
