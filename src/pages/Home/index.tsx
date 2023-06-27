@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "#fff",
 	},
+	content: {
+		paddingBottom: 68,
+	},
 });
 
 export default function Home() {
@@ -20,13 +23,15 @@ export default function Home() {
 		<View style={styles.container}>
 			<StatusBar style="auto" />
 			<ScrollView showsVerticalScrollIndicator={false}>
-				<Header user="David" />
-				<Balance balanceValue={800.25} />
-				<FeaturesTab />
-				<MyCards />
-				<Tips />
-				<CreditCard bill={640.25} limit={400} />
-				<Loan loanValue={25000.0} />
+				<View style={styles.content}>
+					<Header user="David" />
+					<Balance balanceValue={800.25} />
+					<FeaturesTab />
+					<MyCards />
+					<Tips />
+					<CreditCard bill={640.25} limit={400} />
+					<Loan loanValue={25000.0} />
+				</View>
 			</ScrollView>
 		</View>
 	);

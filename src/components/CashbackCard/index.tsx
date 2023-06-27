@@ -1,6 +1,5 @@
 import React from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
-import { ImagesAssets } from "../../../assets/ImagesAssets";
 
 const styles = StyleSheet.create({
 	container: {
