@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
 });
 
 const Store: React.FC = () => {
+	const test = require("../../../assets/aliexpress.png");
 	return (
 		<View style={styles.container}>
 			<StatusBar style="auto" />
@@ -23,23 +24,35 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="AliExpress"
 							discount="4% de cashback"
+							img={require("../../../assets/aliexpress.png")}
 						/>
-						<CashbackCard name="Shopee" discount="2% de cashback" />
+						<CashbackCard
+							name="Shopee"
+							discount="2% de cashback"
+							img={require("../../../assets/shopee.png")}
+						/>
 						<CashbackCard
 							name="Centauro"
 							discount="5% de cashback"
+							img={require("../../../assets/centauro.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Zattini"
 							discount="4% de cashback"
+							img={require("../../../assets/zattini.png")}
 						/>
 						<CashbackCard
 							name="Netshoes"
 							discount="5% de cashback + cupom"
+							img={require("../../../assets/netshoes.png")}
 						/>
-						<CashbackCard name="Nike" discount="6% de cashback" />
+						<CashbackCard
+							name="Nike"
+							discount="6% de cashback"
+							img={require("../../../assets/nike.png")}
+						/>
 					</View>
 				</Cashback>
 				<Cashback name="Celulares">
@@ -47,20 +60,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Trocafone"
 							discount="2,5% de cashback"
+							img={require("../../../assets/trocafone.png")}
 						/>
 						<CashbackCard
 							name="Xiaomi"
 							discount="10% de desconto"
+							img={require("../../../assets/xiaomi.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Celular Seguro"
 							discount="Simule Agora"
+							img={require("../../../assets/celularSeguro.png")}
 						/>
 						<CashbackCard
 							name="Magazine Luiza"
 							discount="Até 50% de desconto"
+							img={require("../../../assets/magalu.png")}
 						/>
 					</View>
 				</Cashback>
@@ -69,10 +86,12 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="iFood"
 							discount="3,5% de desconto no gift card"
+							img={require("../../../assets/ifood.png")}
 						/>
 						<CashbackCard
 							name="Google Play"
 							discount="3,5% de desconto no gift card"
+							img={require("../../../assets/googleplay.png")}
 						/>
 					</View>
 				</Cashback>
@@ -81,20 +100,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Electrolux"
 							discount="1% de cashback"
+							img={require("../../../assets/electrolux.png")}
 						/>
 						<CashbackCard
 							name="Magazine Luiza"
 							discount="Até 50% de desconto"
+							img={require("../../../assets/magalu.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Carrefour"
 							discount="3% de cashback"
+							img={require("../../../assets/carrefour.png")}
 						/>
 						<CashbackCard
 							name="Casas Bahia"
 							discount="1,5% de cashback"
+							img={require("../../../assets/casasbahia.png")}
 						/>
 					</View>
 				</Cashback>
@@ -103,20 +126,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Centauro"
 							discount="5% de cashback"
+							img={require("../../../assets/centauro.png")}
 						/>
 						<CashbackCard
 							name="Okulos"
 							discount="1,5% de cashback"
+							img={require("../../../assets/okulos.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Zattini"
 							discount="4% de cashback"
+							img={require("../../../assets/zattini.png")}
 						/>
 						<CashbackCard
 							name="Netshoes"
 							discount="5% de cashback + cupom"
+							img={require("../../../assets/netshoes.png")}
 						/>
 					</View>
 				</Cashback>
@@ -125,20 +152,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Electrolux"
 							discount="1% de cashback"
+							img={require("../../../assets/electrolux.png")}
 						/>
 						<CashbackCard
 							name="Magazine Luiza"
 							discount="Até 50% de desconto"
+							img={require("../../../assets/magalu.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Carrefour"
 							discount="3% de cashback"
+							img={require("../../../assets/carrefour.png")}
 						/>
 						<CashbackCard
 							name="Casas Bahia"
 							discount="1,5% de cashback"
+							img={require("../../../assets/casasbahia.png")}
 						/>
 					</View>
 				</Cashback>
@@ -147,20 +178,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Quem Disse, Berenice?"
 							discount="7% de cashback"
+							img={require("../../../assets/quemdisseberenice.png")}
 						/>
 						<CashbackCard
 							name="Forever Liss"
 							discount="8,5% de cashback (era 3,5%)"
+							img={require("../../../assets/foreverliss.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="O Boticário"
 							discount="5% de cashback"
+							img={require("../../../assets/oboticario.png")}
 						/>
 						<CashbackCard
 							name="Sephora"
 							discount="6% de cashback"
+							img={require("../../../assets/sephora.png")}
 						/>
 					</View>
 				</Cashback>
@@ -169,17 +204,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Playstation"
 							discount="6% de desconto"
+							img={require("../../../assets/playstation.png")}
 						/>
 						<CashbackCard
 							name="Positivo"
 							discount="110% de cashback"
+							img={require("../../../assets/positivo.png")}
 						/>
 					</View>
 					<View style={styles.row}>
-						<CashbackCard name="Xbox" discount="8% de desconto" />
+						<CashbackCard
+							name="Xbox"
+							discount="8% de desconto"
+							img={require("../../../assets/xbox.png")}
+						/>
 						<CashbackCard
 							name="Nintendo"
 							discount="-99% de desconto"
+							img={require("../../../assets/nintendo.png")}
 						/>
 					</View>
 				</Cashback>
@@ -188,20 +230,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="123 Milhas"
 							discount="2,5% de cashback"
+							img={require("../../../assets/123milhas.png")}
 						/>
 						<CashbackCard
 							name="Seguro Viagem"
 							discount="Simule Agora"
+							img={require("../../../assets/seguroViagem.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Transferência Internacional"
 							discount="15% de desconto"
+							img={require("../../../assets/transferenciaInternacional.png")}
 						/>
 						<CashbackCard
 							name="Buser"
 							discount="5,5% de cashback"
+							img={require("../../../assets/buser.png")}
 						/>
 					</View>
 				</Cashback>
@@ -210,20 +256,24 @@ const Store: React.FC = () => {
 						<CashbackCard
 							name="Aliexpress"
 							discount="4% de cashback"
+							img={require("../../../assets/aliexpress.png")}
 						/>
 						<CashbackCard
 							name="Telhanorte"
 							discount="4,5% de cashback"
+							img={require("../../../assets/telhanorte.png")}
 						/>
 					</View>
 					<View style={styles.row}>
 						<CashbackCard
 							name="Mobly"
 							discount="1,5% de cashback"
+							img={require("../../../assets/mobly.png")}
 						/>
 						<CashbackCard
 							name="Tok&Stok"
 							discount="2% de cashback"
+							img={require("../../../assets/tok&stock.png")}
 						/>
 					</View>
 				</Cashback>
