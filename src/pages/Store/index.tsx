@@ -12,7 +12,7 @@ const Store: React.FC = () => {
 		<View style={styles.container}>
 			<StatusBar style="auto" />
 			<ScrollView showsVerticalScrollIndicator={false}>
-				<Header user="David" />
+				<Header />
 			</ScrollView>
 		</View>
 	);
