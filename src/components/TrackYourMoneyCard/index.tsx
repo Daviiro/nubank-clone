@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	Dimensions,
+	TouchableOpacity,
+} from "react-native";
 
 const styles = StyleSheet.create({
 	container: {
@@ -38,16 +44,21 @@ interface Props {
 const TrackYourMoneyCard: React.FC<Props> = ({ title }) => {
 	const windowWidth = Dimensions.get("window").width;
 	return (
-		<View style={[styles.container, { width: windowWidth / 3.5 }]}>
-			<View style={styles.content}>
-				<Text style={styles.innerText} textBreakStrategy={"balanced"}>
-					{title}
-				</Text>
+		<TouchableOpacity>
+			<View style={[styles.container, { width: windowWidth / 3.5 }]}>
+				<View style={styles.content}>
+					<Text
+						style={styles.innerText}
+						textBreakStrategy={"balanced"}
+					>
+						{title}
+					</Text>
+				</View>
+				<View style={styles.footer}>
+					<Text style={styles.outsideText}>Conhecer</Text>
+				</View>
 			</View>
-			<View style={styles.footer}>
-				<Text style={styles.outsideText}>Conhecer</Text>
-			</View>
-		</View>
+		</TouchableOpacity>
 	);
 };
 
