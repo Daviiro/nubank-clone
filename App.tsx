@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeTabs from "./src/components/HomeTabs";
 import Balance from "./src/pages/Balance";
+import Money from "./src/pages/Money";
 
 export type StackParamList = {
 	Home: undefined;
@@ -20,7 +21,6 @@ export default function App() {
 			>
 				<Stack.Screen name="HomePage" component={HomeTabs} />
 				<Stack.Screen name="BalancePage" component={Balance} />
-				<Stack.Screen name="StorePage" component={Store} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

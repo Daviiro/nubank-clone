@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../pages/Home";
 import TabBar from "../TabBar";
 import Store from "../../pages/Store";
+import Money from "../../pages/Money";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,8 +26,8 @@ const HomeTabs: React.FC = () => {
 				}}
 			/>
 			<Tab.Screen
-				name="Store2"
-				component={Store}
+				name="Money"
+				component={Money}
 				options={{
 					title: "attach-money",
 				}}
