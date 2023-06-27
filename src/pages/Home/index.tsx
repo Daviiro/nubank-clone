@@ -29,7 +29,7 @@ export default function Home() {
 					<FeaturesTab />
 					<MyCards />
 					<Tips />
-					<CreditCard bill={640.25} limit={400} />
+					<CreditCard bill={640.25} limit={1040.25} />
 					<Loan loanValue={25000.0} />
 				</View>
 			</ScrollView>
