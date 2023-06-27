@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		position: "absolute",
 		bottom: 0,
-		backgroundColor: "rgba(255, 255, 255, 0.9)",
+		backgroundColor: "rgba(255, 255, 255, 0.7)",
 		gap: 8,
 		elevation: 10,
 		shadowColor: "#000",
@@ -73,7 +73,7 @@ const TabBar: React.FC<Props> = ({ state, descriptors, navigation }) => {
 							canPreventDefault: true,
 						});
 
-						if (isFocused && !event.defaultPrevented) {
+						if (!isFocused && !event.defaultPrevented) {
 							navigation.navigate({
 								name: route.name,
 								merge: true,

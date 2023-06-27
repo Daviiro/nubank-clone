@@ -1,4 +1,4 @@
-import Home from "./src/pages/Home";
+import Store from "./src/pages/Store";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeTabs from "./src/components/HomeTabs";
@@ -20,6 +20,7 @@ export default function App() {
 			>
 				<Stack.Screen name="HomePage" component={HomeTabs} />
 				<Stack.Screen name="BalancePage" component={Balance} />
+				<Stack.Screen name="StorePage" component={Store} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

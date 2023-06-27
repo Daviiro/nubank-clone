@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../pages/Home";
 import TabBar from "../TabBar";
-import { MaterialIcons } from "@expo/vector-icons";
+import Store from "../../pages/Store";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,22 +18,22 @@ const HomeTabs: React.FC = () => {
 			tabBar={(props) => <TabBar {...props} />}
 		>
 			<Tab.Screen
-				name="Home"
+				name="HomePage"
 				component={Home}
 				options={{
 					title: "compare-arrows",
 				}}
 			/>
 			<Tab.Screen
-				name="Home2"
-				component={Home}
+				name="Store2"
+				component={Store}
 				options={{
 					title: "attach-money",
 				}}
 			/>
 			<Tab.Screen
-				name="Home3"
-				component={Home}
+				name="Store"
+				component={Store}
 				options={{
 					title: "storefront",
 				}}
