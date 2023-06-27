@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 });
 
 interface Props {
-	user: string;
+	user?: string;
 }
 
 const Header: React.FC<Props> = ({ user }) => {
@@ -78,9 +78,13 @@ const Header: React.FC<Props> = ({ user }) => {
 					</TouchableOpacity>
 				</View>
 			</View>
-			<View style={styles.lowerContent}>
-				<Text style={styles.welcomeText}>Olá, {user}!</Text>
-			</View>
+			{user ? (
+				<View style={styles.lowerContent}>
+					<Text style={styles.welcomeText}>Olá, {user}!</Text>
+				</View>
+			) : (
+				<View />
+			)}
 		</View>
 	);
 };
