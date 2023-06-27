@@ -2,6 +2,8 @@ import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Header from "../../components/Header";
+import TrackYourMoney from "../../components/TrackYourMoney";
+import Insurance from "../../components/Insurance";
 
 const styles = StyleSheet.create({
 	container: {},
@@ -16,6 +18,8 @@ const Money: React.FC = () => {
 			<StatusBar style="auto" />
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<Header />
+				<TrackYourMoney />
+				<Insurance />
 			</ScrollView>
 		</View>
 	);
