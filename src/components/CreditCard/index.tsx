@@ -1,6 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { StackParamList } from "../../../App";
+import { StackNavigationProp } from "@react-navigation/stack";
 
 const styles = StyleSheet.create({
 	container: {
@@ -40,7 +43,10 @@ interface Props {
 	limit: number;
 }
 
+type balanceScreenProp = StackNavigationProp<StackParamList, "AdjustLimitPage">;
+
 const CreditCard: React.FC<Props> = ({ bill, limit }) => {
+	const navigation = useNavigation<balanceScreenProp>();
 	return (
 		<View style={styles.container}>
 			<View
@@ -49,7 +55,11 @@ const CreditCard: React.FC<Props> = ({ bill, limit }) => {
 					borderTopWidth: StyleSheet.hairlineWidth,
 				}}
 			/>
-			<TouchableOpacity>
+			<TouchableOpacity
+				onPress={() =>
+					navigation.navigate("AdjustLimitPage", { bill, limit })
+				}
+			>
 				<View style={styles.content}>
 					<View style={styles.upperContent}>
 						<Text style={styles.creditCardText}>
@@ -64,7 +74,9 @@ const CreditCard: React.FC<Props> = ({ bill, limit }) => {
 						</Text>
 						<Text style={styles.availableValue}>
 							Limite disponível de R${" "}
-							{limit ? String(limit).replace(".", ",") : "0,00"}
+							{limit && bill
+								? String(limit - bill).replace(".", ",")
+								: "0,00"}
 						</Text>
 					</View>
 				</View>
