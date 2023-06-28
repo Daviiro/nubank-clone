@@ -4,6 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 import NavigationHeader from "../../components/NavigationHeader";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { StackParamList } from "../../../App";
+import InputSlider from "../../components/InputSlider";
 
 const styles = StyleSheet.create({
 	container: {
@@ -58,6 +59,12 @@ const AdjustLimit: React.FC = () => {
 						disponível para uso
 					</Text>
 				</View>
+				<InputSlider
+					min={0}
+					max={calculatedBill + calculatedLimit}
+					steps={50}
+					onChangeValue={(limite) => console.log(limite)}
+				/>
 			</View>
 		</View>
 	);
