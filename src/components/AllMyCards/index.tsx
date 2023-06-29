@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 	},
 });
 
-const MyCards: React.FC = () => {
+const AllMyCards: React.FC = () => {
 	return (
 		<TouchableOpacity>
 			<View style={styles.container}>
@@ -38,4 +38,4 @@ const MyCards: React.FC = () => {
 	);
 };
 
-export default MyCards;
+export default AllMyCards;

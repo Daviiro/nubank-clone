@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import Header from "../../components/Header";
 import Balance from "../../components/Balance";
 import FeaturesTab from "../../components/FeaturesTab";
-import MyCards from "../../components/MyCards";
+import AllMyCards from "../../components/AllMyCards";
 import Tips from "../../components/Tips";
 import CreditCard from "../../components/CreditCard";
 import Loan from "../../components/Loan";
@@ -27,7 +27,7 @@ export default function Home() {
 					<Header user="David" />
 					<Balance balanceValue={800.25} />
 					<FeaturesTab />
-					<MyCards />
+					<AllMyCards />
 					<Tips />
 					<CreditCard bill={640.25} limit={1040.25} />
 					<Loan loanValue={25000.0} />
