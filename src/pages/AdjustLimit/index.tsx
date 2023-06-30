@@ -1,6 +1,6 @@
+import React, { useState, useRef } from "react";
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 import NavigationHeader from "../../components/NavigationHeader";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { StackParamList } from "../../../App";
@@ -20,10 +20,16 @@ const styles = StyleSheet.create({
 	},
 	adjustLimit: {
 		marginTop: 60,
-
+		flexDirection: "row",
 		alignSelf: "center",
 	},
 	limitText: {
+		fontSize: 16,
+		color: "green",
+	},
+	valueText: {
+		marginTop: -3,
+		marginLeft: 5,
 		fontSize: 16,
 		color: "green",
 	},
@@ -32,12 +38,11 @@ const styles = StyleSheet.create({
 const AdjustLimit: React.FC = () => {
 	const route = useRoute<RouteProp<StackParamList, "AdjustLimit">>();
 
-	const [calculatedBill, setCalculatedBill] = useState(
-		route.params?.bill ? route.params?.bill : 0
-	);
-	const [calculatedLimit, setCalculatedLimit] = useState(
-		route.params?.limit ? route.params.limit - calculatedBill : 0
-	);
+	const calculatedBill = route.params?.bill ? route.params?.bill : 0;
+	const calculatedLimit = route.params?.limit
+		? route.params.limit - calculatedBill
+		: 0;
+	const limRef = useRef();
 
 	return (
 		<View style={styles.container}>
@@ -51,19 +56,25 @@ const AdjustLimit: React.FC = () => {
 						: "0,00"}
 				</Text>
 				<View style={styles.adjustLimit}>
-					<Text style={styles.limitText}>
-						R${" "}
-						{calculatedLimit
-							? String(calculatedLimit).replace(".", ",")
-							: "0,00"}{" "}
-						disponível para uso
-					</Text>
+					<Text style={styles.limitText}>R$ </Text>
+					<TextInput
+						ref={limRef}
+						style={styles.valueText}
+						defaultValue="0"
+					/>
+					<Text style={styles.limitText}> disponível para uso</Text>
 				</View>
 				<InputSlider
 					min={0}
 					max={calculatedBill + calculatedLimit}
 					steps={50}
-					onChangeValue={(limite) => console.log(limite)}
+					onChangeValue={(limite) => {
+						if (limRef.current) {
+							limRef.current.setNativeProps({
+								text: limite.value,
+							});
+						}
+					}}
 				/>
 			</View>
 		</View>
